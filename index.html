@@ -1,17 +1,1093 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NEXORA 2026 — Master Fresher</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at top,#241d08 0%,#050507 65%);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-align:center;padding:24px}
-.b{font-size:11px;font-weight:800;letter-spacing:4px;color:#d4af37;text-transform:uppercase}
-h1{font-size:clamp(42px,12vw,72px);font-weight:900;letter-spacing:4px;margin:8px 0;background:linear-gradient(135deg,#fff,#f5e3a9 30%,#d4af37 70%,#aa7c11);-webkit-background-clip:text;background-clip:text;color:transparent}
-.t{color:#ccc;font-size:13px;letter-spacing:1px}
-.d{margin-top:22px;color:#ffd700;font-weight:700}
-.s{color:#8b93a7;font-size:12px;margin-top:4px}
-</style></head><body><div>
-<div class="b">Master Fresher</div><h1>NEXORA 2026</h1>
-<div class="t">New People &bull; New Stories &bull; Same Dreams</div>
-<div class="d">13 October 2026 &middot; 11:30 AM &ndash; 5:30 PM</div>
-<div class="s">Tamasha Balle Balle Restaurant, Bilaspur</div>
-</div></body></html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#050507">
+    <title>NEXORA 2026 — Master Fresher</title>
+    <meta name="description"
+        content="NEXORA 2026 Master Fresher party — 13 October 2026, Tamasha Balle Balle Restaurant, Bilaspur. Register now.">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold2: #ffd700;
+            --cream: #f5e3a9;
+            --bg: #050507;
+            --panel: #0e0e14;
+            --panel2: #13131b;
+            --line: #2a2410;
+            --mut: #8b93a7;
+            --r: 20px
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px
+        }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.55;
+            overflow-x: hidden
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 18px
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: var(--gold);
+            text-transform: uppercase
+        }
+
+        .gtext {
+            background: linear-gradient(135deg, #fff, var(--cream) 30%, var(--gold) 70%, #aa7c11);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 14px 30px;
+            border-radius: 40px;
+            transition: .2s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit
+        }
+
+        .btn.gold {
+            background: linear-gradient(135deg, var(--cream), var(--gold));
+            color: #09090c;
+            box-shadow: 0 10px 34px rgba(212, 175, 55, .28)
+        }
+
+        .btn.gold:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.07)
+        }
+
+        .btn.out {
+            border: 1.5px solid var(--gold);
+            color: var(--gold2);
+            background: transparent
+        }
+
+        .btn.out:hover {
+            background: rgba(212, 175, 55, .12)
+        }
+
+        .btn.sm {
+            padding: 9px 20px;
+            font-size: 12px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: none
+        }
+
+        /* nav */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: .3s
+        }
+
+        nav.stuck {
+            background: rgba(5, 5, 7, .82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid #1a1a22
+        }
+
+        .navin {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 18px
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-right: auto
+        }
+
+        .logo i {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--cream), var(--gold));
+            color: #09090c;
+            font-style: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 20px
+        }
+
+        .navlinks a {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #c4c8d4;
+            transition: color .2s
+        }
+
+        .navlinks a:hover {
+            color: var(--gold2)
+        }
+
+        .nav-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            width: 36px;
+            height: 36px;
+            padding: 8px 7px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer
+        }
+
+        .nav-toggle span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: #fff;
+            border-radius: 2px;
+            transition: .25s ease
+        }
+
+        .nav-toggle.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg)
+        }
+
+        .nav-toggle.open span:nth-child(2) {
+            opacity: 0
+        }
+
+        .nav-toggle.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg)
+        }
+
+        @media(max-width:760px) {
+            .nav-toggle {
+                display: flex
+            }
+
+            .navlinks {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(14, 14, 20, .96);
+                backdrop-filter: blur(18px);
+                border-bottom: 1px solid #1a1a22;
+                flex-direction: column;
+                gap: 0;
+                padding: 12px 18px 18px;
+                display: none
+            }
+
+            .navlinks.open {
+                display: flex
+            }
+
+            .navlinks a {
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .05);
+                font-size: 13px
+            }
+
+            .navlinks a:last-child {
+                border-bottom: none
+            }
+        }
+
+        /* hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 110px 18px 70px;
+            overflow: hidden
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: .5;
+            animation: float 12s ease-in-out infinite
+        }
+
+        .hero::before {
+            width: 480px;
+            height: 480px;
+            background: #3a2c08;
+            top: -120px;
+            left: -140px
+        }
+
+        .hero::after {
+            width: 420px;
+            height: 420px;
+            background: #2a1a06;
+            bottom: -120px;
+            right: -120px;
+            animation-delay: -6s
+        }
+
+        @keyframes float {
+            50% {
+                transform: translate(40px, 30px) scale(1.12)
+            }
+        }
+
+        .hero>div {
+            position: relative;
+            z-index: 1;
+            max-width: 760px
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .03);
+            color: #cbd5e1
+        }
+
+        .chip i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4ade80;
+            box-shadow: 0 0 10px #4ade80
+        }
+
+        .chip.closed i {
+            background: #f87171;
+            box-shadow: 0 0 10px #f87171
+        }
+
+        h1.title {
+            font-size: clamp(52px, 15vw, 112px);
+            font-weight: 900;
+            letter-spacing: 5px;
+            line-height: 1;
+            margin: 18px 0 8px
+        }
+
+        .tag {
+            color: #cfd3dc;
+            letter-spacing: 2px;
+            font-size: 13px
+        }
+
+        .infos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 26px 0
+        }
+
+        .info {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 10px 16px;
+            text-align: left
+        }
+
+        .info small {
+            display: block;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 800
+        }
+
+        .info b {
+            font-size: 14px
+        }
+
+        .count {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 6px 0 30px
+        }
+
+        .count div {
+            min-width: 72px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 12px 6px
+        }
+
+        .count b {
+            display: block;
+            font-size: 30px;
+            font-weight: 900;
+            color: var(--gold2);
+            line-height: 1.1;
+            font-variant-numeric: tabular-nums
+        }
+
+        .count span {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: var(--mut);
+            text-transform: uppercase;
+            font-weight: 800
+        }
+
+        .btns {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        /* sections */
+        section {
+            padding: 74px 0
+        }
+
+        .sh {
+            text-align: center;
+            margin-bottom: 36px
+        }
+
+        .sh h2 {
+            font-size: clamp(28px, 6vw, 42px);
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-top: 8px
+        }
+
+        .sh p {
+            color: var(--mut);
+            font-size: 14px;
+            margin-top: 8px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px
+        }
+
+        .strip span {
+            padding: 10px 22px;
+            border: 1px solid var(--line);
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold2);
+            background: var(--panel)
+        }
+
+        .price {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            max-width: 620px;
+            margin: 0 auto
+        }
+
+        .pc {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 26px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .pc.feat {
+            border-color: var(--gold);
+            background: linear-gradient(180deg, #1a1405, var(--panel))
+        }
+
+        .pc h3 {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold)
+        }
+
+        .pc .amt {
+            font-size: 46px;
+            font-weight: 900;
+            margin: 8px 0 2px
+        }
+
+        .pc .amt small {
+            font-size: 20px;
+            color: var(--gold2);
+            margin-right: 2px
+        }
+
+        .pc p {
+            font-size: 12px;
+            color: var(--mut)
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 14px
+        }
+
+        .step {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 22px 18px;
+            position: relative
+        }
+
+        .step .n {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--cream), var(--gold));
+            color: #09090c;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px
+        }
+
+        .step h4 {
+            font-size: 15px;
+            margin-bottom: 4px
+        }
+
+        .step p {
+            font-size: 13px;
+            color: var(--mut)
+        }
+
+        /* admin desk board */
+        .board {
+            background: linear-gradient(135deg, #17120a, var(--panel));
+            border: 1.5px solid var(--gold);
+            border-radius: 24px;
+            padding: 26px 22px;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 22px;
+            box-shadow: 0 20px 60px rgba(212, 175, 55, .08);
+            position: relative
+        }
+
+        .board::before {
+            content: "📌";
+            position: absolute;
+            top: -14px;
+            left: 24px;
+            font-size: 26px
+        }
+
+        @media(max-width:760px) {
+            .board {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .board h3 {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 10px
+        }
+
+        .board .loc {
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.35
+        }
+
+        .board .loc small {
+            display: block;
+            font-size: 13px;
+            color: #cbd5e1;
+            font-weight: 500;
+            margin-top: 4px
+        }
+
+        .board ul {
+            list-style: none;
+            margin-top: 14px;
+            display: grid;
+            gap: 8px
+        }
+
+        .board li {
+            font-size: 13px;
+            color: #d8dbe4;
+            padding-left: 22px;
+            position: relative
+        }
+
+        .board li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--gold)
+        }
+
+        .calls {
+            display: grid;
+            gap: 10px;
+            align-content: start
+        }
+
+        .call {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            text-decoration: none;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 12px 16px;
+            transition: .2s
+        }
+
+        .call:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, .08)
+        }
+
+        .call b {
+            font-size: 16px;
+            letter-spacing: 1px
+        }
+
+        .call span {
+            font-size: 11px;
+            color: var(--gold2);
+            font-weight: 800;
+            letter-spacing: 1px
+        }
+
+        /* team */
+        .dept {
+            margin-bottom: 38px
+        }
+
+        .dt {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px
+        }
+
+        .dt h3 {
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold2);
+            white-space: nowrap
+        }
+
+        .dt .line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--gold), transparent)
+        }
+
+        .dt .cn {
+            font-size: 11px;
+            color: var(--mut);
+            white-space: nowrap
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 22px 14px 18px;
+            text-align: center;
+            transition: .25s
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 14px 40px rgba(212, 175, 55, .14)
+        }
+
+        .photo {
+            width: 116px;
+            height: 116px;
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--cream), var(--gold), #7a5a0e)
+        }
+
+        .photo img,
+        .photo .ini {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            background: #14141c
+        }
+
+        .photo .ini {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--gold2)
+        }
+
+        .photo.noimg img {
+            display: none
+        }
+
+        .photo.noimg .ini {
+            display: flex
+        }
+
+        .name {
+            font-size: 16px;
+            font-weight: 800
+        }
+
+        .role {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 4px
+        }
+
+        .dpt {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            padding: 3px 11px;
+            border: 1px solid var(--gold);
+            border-radius: 20px;
+            color: var(--gold2);
+            text-transform: uppercase
+        }
+
+        /* staff portal */
+        .portal {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            max-width: 700px;
+            margin: 0 auto
+        }
+
+        .pt {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 26px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            transition: .25s
+        }
+
+        .pt:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 14px 40px rgba(212, 175, 55, .12)
+        }
+
+        .pt .ic {
+            font-size: 34px;
+            margin-bottom: 10px
+        }
+
+        .pt h4 {
+            font-size: 16px;
+            letter-spacing: 1px
+        }
+
+        .pt p {
+            font-size: 12px;
+            color: var(--mut);
+            margin: 6px 0 14px
+        }
+
+        .pt .lock {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #3a3a4a;
+            color: #cbd5e1
+        }
+
+        .cta {
+            text-align: center;
+            padding: 80px 18px;
+            background: radial-gradient(ellipse at bottom, #241d08 0%, var(--bg) 70%)
+        }
+
+        .cta h2 {
+            font-size: clamp(28px, 7vw, 44px);
+            font-weight: 900;
+            letter-spacing: 2px
+        }
+
+        .cta p {
+            color: var(--mut);
+            margin: 10px 0 26px
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 18px;
+            color: #5b5f6e;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            border-top: 1px solid #15151c
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="navin">
+            <a class="logo" href="#top"><i>N</i><span>NEXORA <span class="gtext">'26</span></span></a>
+            <div class="navlinks" id="navLinks"><a href="#about">About</a><a href="#how">How it works</a><a href="#desk">Desk</a><a
+                    href="#team">Team</a><a href="#staff">Staff</a></div>
+            <a class="btn gold sm" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank"
+                rel="noopener">Register</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div>
+            <span class="chip" id="regChip"><i></i><span id="regTxt">Registration</span></span>
+            <div class="eyebrow" style="margin-top:22px">Master Fresher Party</div>
+            <h1 class="title gtext">NEXORA<br>2026</h1>
+            <div class="tag">New People &bull; New Stories &bull; Same Dreams</div>
+            <div class="infos">
+                <div class="info"><small>Date</small><b>13 October 2026</b></div>
+                <div class="info"><small>Time</small><b>11:30 AM – 5:30 PM</b></div>
+                <div class="info"><small>Venue</small><b>Tamasha Balle Balle, Bilaspur</b></div>
+            </div>
+            <div class="count" id="count">
+                <div><b id="cd">–</b><span>Days</span></div>
+                <div><b id="ch">–</b><span>Hours</span></div>
+                <div><b id="cm">–</b><span>Mins</span></div>
+                <div><b id="cs">–</b><span>Secs</span></div>
+            </div>
+            <div class="btns">
+                <a class="btn gold" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener"
+                    id="regBtn">REGISTER NOW</a>
+                <a class="btn out" href="#how">HOW IT WORKS</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="wrap">
+            <div class="sh reveal"><span class="eyebrow">One day. One crowd.</span>
+                <h2>Music · Dance · Games · Food · Fun</h2>
+                <p>A welcome party for the new M.Sc. batch — meet your seniors, make new friends and start the year
+                    right.</p>
+            </div>
+            <div class="strip reveal">
+                <span>Music</span><span>Dance</span><span>Games</span><span>Food</span><span>Fun</span>
+            </div>
+            <div class="price reveal" style="margin-top:36px">
+                <div class="pc">
+                    <h3>Junior</h3>
+                    <div class="amt"><small>₹</small>899</div>
+                    <p>Entry pass · all activities</p>
+                </div>
+                <div class="pc feat">
+                    <h3>Senior</h3>
+                    <div class="amt"><small>₹</small>999</div>
+                    <p>Entry pass · all activities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" style="background:#08080b">
+        <div class="wrap">
+            <div class="sh reveal"><span class="eyebrow">Simple &amp; quick</span>
+                <h2>How it works</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="n">1</div>
+                    <h4>Register</h4>
+                    <p>Fill the short online form with your details. You'll get a Registration ID by email.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="n">2</div>
+                    <h4>Pay</h4>
+                    <p>Pay online by UPI, or in cash at the Admin Desk.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="n">3</div>
+                    <h4>Get your pass</h4>
+                    <p>Once payment is verified, your QR entry pass arrives by email — download it in one tap.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="n">4</div>
+                    <h4>Scan &amp; enter</h4>
+                    <p>Show the QR at the gate. One pass, one entry. Enjoy the party!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="desk">
+        <div class="wrap">
+            <div class="sh reveal"><span class="eyebrow">Offline Support</span>
+                <h2>Admin Desk</h2>
+                <p>Register in person, make cash payments, or get help with your pass</p>
+            </div>
+            <div class="board reveal">
+                <div>
+                    <h3>Desk Location</h3>
+                    <div class="loc">Department of Chemistry<small>Main Building, Bilaspur Campus</small></div>
+                    <ul>
+                        <li>Cash payment &amp; instant pass generation</li>
+                        <li>Registration assistance &amp; query resolution</li>
+                        <li>Timings: 10:00 AM – 4:00 PM (Mon – Sat)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Desk Coordinators</h3>
+                    <div class="calls">
+                        <a class="call" href="tel:+919876543210"><b>Sagar Lahre</b><span>Call &rarr;</span></a>
+                        <a class="call" href="tel:+919876543211"><b>Ankit Patel</b><span>Call &rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" style="background:#08080b">
+        <div class="wrap">
+            <div class="sh reveal"><span class="eyebrow">The people behind it</span>
+                <h2>NEXORA '26 Team</h2>
+                <p>M.Sc. students organising your Master Fresher party</p>
+            </div>
+            <div id="teamRoot"></div>
+        </div>
+    </section>
+
+    <section id="staff">
+        <div class="wrap">
+            <div class="sh reveal"><span class="eyebrow">Organiser Access</span>
+                <h2>Staff Portal</h2>
+                <p>Restricted access for event coordinators and gate verification staff</p>
+            </div>
+            <div class="portal reveal">
+                <a class="pt" href="admin/">
+                    <div class="ic">🛠️</div>
+                    <h4>Admin Dashboard</h4>
+                    <p>Manage registrations, verify payments &amp; issue passes</p>
+                    <span class="lock">Password Protected</span>
+                </a>
+                <a class="pt" href="scanner/">
+                    <div class="ic">📷</div>
+                    <h4>Gate Scanner</h4>
+                    <p>Scan entry QR passes live at the venue gate</p>
+                    <span class="lock">Authorized Staff Only</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="wrap reveal">
+            <span class="eyebrow" style="margin-bottom:12px;display:inline-block">Join the Celebration</span>
+            <h2>Ready to Join NEXORA '26?</h2>
+            <p>Don't miss the biggest welcome party of the year. Grab your pass now.</p>
+            <a class="btn gold" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener">REGISTER NOW</a>
+        </div>
+    </section>
+
+    <footer>NEXORA '26 &bull; MASTER FRESHER &bull; BILASPUR</footer>
+
+    <script>
+        /* ===== EDIT THE TEAM HERE =====
+           Photos go in a "photos" folder next to this page, named like the "photo" value
+           (e.g. photos/sagar-lahre.jpg). .jpg .jpeg .png .webp all work; initials show if missing. */
+        const TEAM = [
+            {
+                dept: "Chemistry", members: [
+                    { name: "Sagar Lahre", photo: "sagar-lahre" }, { name: "Ankit Patel", photo: "ankit-patel" },
+                    { name: "Md Kaif", photo: "md-kaif" }, { name: "Harsh Jaiswal", photo: "harsh-jaiswal" }]
+            },
+            {
+                dept: "Zoology", members: [
+                    { name: "Kritika Vaishnav", photo: "kritika-vaishnav" }, { name: "Mushkan", photo: "mushkan" }]
+            },
+            {
+                dept: "Computer Science", members: [
+                    { name: "Abhay Singh", photo: "abhay-singh" }, { name: "Ajay Chandra", photo: "ajay-chandra" }]
+            }
+        ];
+        const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+        const ini = (n) => n.trim().split(/\s+/).slice(0, 2).map(w => w[0]).join("").toUpperCase();
+
+        document.getElementById("teamRoot").innerHTML = TEAM.map(d => `
+  <div class="dept reveal">
+    <div class="dt"><h3>${esc(d.dept)}</h3><span class="line"></span><span class="cn">${d.members.length} member${d.members.length > 1 ? "s" : ""}</span></div>
+    <div class="grid">${d.members.map(m => `
+      <div class="card">
+        <div class="photo noimg" data-photo="${esc(m.photo)}"><img alt="${esc(m.name)}" loading="lazy"><div class="ini">${esc(ini(m.name))}</div></div>
+        <div class="name">${esc(m.name)}</div><div class="role">M.Sc. Student</div><span class="dpt">${esc(d.dept)}</span>
+      </div>`).join("")}</div>
+  </div>`).join("");
+
+        document.querySelectorAll(".photo").forEach(box => {
+            const img = box.querySelector("img"), exts = ["jpg", "jpeg", "png", "webp"]; let i = 0;
+            const next = () => { if (i < exts.length) img.src = "photos/" + box.dataset.photo + "." + exts[i++]; else box.classList.add("noimg"); };
+            img.onload = () => box.classList.remove("noimg"); img.onerror = next; next();
+        });
+
+        /* countdown + registration status (India time) */
+        const EVENT = new Date("2026-10-13T11:30:00+05:30"), OPEN = new Date("2026-10-01T00:00:00+05:30"), CLOSE = new Date("2026-10-06T23:59:59+05:30");
+        const pad = (n) => String(n).padStart(2, "0");
+        function tick() {
+            const now = new Date(); let ms = EVENT - now;
+            if (ms <= 0) { document.getElementById("count").innerHTML = '<div style="min-width:0;padding:12px 24px"><b style="font-size:20px">The party is on! 🎉</b></div>'; }
+            else {
+                const s = Math.floor(ms / 1000);
+                document.getElementById("cd").textContent = Math.floor(s / 86400); document.getElementById("ch").textContent = pad(Math.floor(s % 86400 / 3600));
+                document.getElementById("cm").textContent = pad(Math.floor(s % 3600 / 60)); document.getElementById("cs").textContent = pad(s % 60);
+            }
+            const chip = document.getElementById("regChip"), t = document.getElementById("regTxt");
+            if (now < OPEN) { t.textContent = "Registration opens 1 Oct"; chip.classList.add("closed"); }
+            else if (now <= CLOSE) { t.textContent = "Registration open · closes 6 Oct"; chip.classList.remove("closed"); }
+            else { t.textContent = "Registration closed"; chip.classList.add("closed"); document.getElementById("regBtn").textContent = "REGISTRATION CLOSED"; }
+        }
+        tick(); setInterval(tick, 1000);
+
+        /* nav + scroll reveal */
+        const nav = document.getElementById("nav");
+        addEventListener("scroll", () => nav.classList.toggle("stuck", scrollY > 30), { passive: true });
+        const navToggle = document.getElementById("navToggle");
+        const navLinks = document.getElementById("navLinks");
+        if (navToggle && navLinks) {
+            navToggle.addEventListener("click", () => {
+                navToggle.classList.toggle("open");
+                navLinks.classList.toggle("open");
+            });
+            navLinks.querySelectorAll("a").forEach(a => {
+                a.addEventListener("click", () => {
+                    navToggle.classList.remove("open");
+                    navLinks.classList.remove("open");
+                });
+            });
+        }
+        const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+        document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+    </script>
+</body>
+
+</html>
