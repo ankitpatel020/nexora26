@@ -2,2242 +2,406 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#050507">
-    <title>NEXORA ’26 — Master’s Fresher Party | Bilaspur</title>
-    <meta name="description"
-        content="NEXORA ’26 — Master’s Fresher Party. 13 October 2026, 11:00 AM – 5:00 PM at Tamasha Balle Balle Restaurant, Bilaspur. Register now for the biggest welcome celebration.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            --bg: #050507;
-            --bg-elevated: #0a0a0f;
-            --panel: #0e0e16;
-            --panel-glass: rgba(14, 14, 22, 0.72);
-            --gold: #d4af37;
-            --gold2: #ffd700;
-            --cream: #f7e6b5;
-            --champagne: #faefd2;
-            --line: rgba(212, 175, 55, 0.22);
-            --line-dim: rgba(255, 255, 255, 0.08);
-            --mut: #969eb2;
-            --white: #fdfbf7;
-            --shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-            --glow: 0 0 35px rgba(212, 175, 55, 0.18);
-            --r: 20px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 84px;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--white);
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            font: inherit;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .container {
-            width: min(1200px, 92%);
-            margin: 0 auto;
-        }
-
-        .serif {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-        }
-
-        .gtext {
-            background: linear-gradient(135deg, #ffffff 0%, var(--champagne) 30%, var(--gold2) 70%, #aa7c11 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .eyebrow {
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 3.5px;
-            text-transform: uppercase;
-            color: var(--gold);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .eyebrow::before {
-            content: "";
-            width: 18px;
-            height: 1px;
-            background: var(--gold);
-        }
-
-        .section-head {
-            text-align: center;
-            max-width: 720px;
-            margin: 0 auto 52px;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(34px, 5.5vw, 56px);
-            font-weight: 700;
-            line-height: 1.08;
-            margin: 12px 0 16px;
-        }
-
-        .section-copy {
-            color: var(--mut);
-            font-size: clamp(15px, 1.8vw, 17px);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 0.8px;
-            padding: 13px 26px;
-            border-radius: 40px;
-            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, var(--champagne), var(--gold2) 55%, var(--gold));
-            color: #0b0904;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.28);
-            border: 1px solid rgba(255, 235, 170, 0.5);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 40px rgba(212, 175, 55, 0.42);
-            filter: brightness(1.06);
-        }
-
-        .btn-out {
-            border: 1.5px solid var(--line);
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--champagne);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-out:hover {
-            background: rgba(212, 175, 55, 0.12);
-            border-color: var(--gold);
-            transform: translateY(-2px);
-            color: #fff;
-        }
-
-        .btn-sm {
-            padding: 9px 18px;
-            font-size: 12px;
-            letter-spacing: 0.6px;
-        }
-
-        /* Nav */
-        header.site-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            transition: background 0.3s, border 0.3s, padding 0.3s;
-            background: rgba(5, 5, 7, 0.75);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.14);
-        }
-
-        header.site-header.stuck {
-            background: rgba(5, 5, 7, 0.94);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.22);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        .nav-inner {
-            height: 78px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            border: 1.5px solid var(--gold);
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.8));
-            display: grid;
-            place-items: center;
-            font-size: 20px;
-            color: var(--gold2);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
-        }
-
-        .brand-meta {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            line-height: 1;
-            color: var(--white);
-        }
-
-        .brand-title span {
-            color: var(--gold);
-        }
-
-        .brand-sub {
-            font-size: 8.5px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: var(--cream);
-            text-transform: uppercase;
-            margin-top: 3px;
-        }
-
-        .nav-desktop {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            font-size: 13.5px;
-            font-weight: 600;
-            color: #d1d5db;
-        }
-
-        .nav-links a {
-            transition: color 0.2s;
-            position: relative;
-            padding: 8px 0;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold2);
-        }
-
-        .nav-links a.active {
-            color: var(--white);
-        }
-
-        .nav-links a.active::after {
-            content: "";
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--gold);
-            border-radius: 2px;
-        }
-
-        .nav-utility {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding-left: 12px;
-            border-left: 1px solid var(--line);
-        }
-
-        .util-link {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            padding: 6px 12px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #cbd5e1;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .util-link:hover {
-            background: rgba(212, 175, 55, 0.15);
-            border-color: var(--gold);
-            color: var(--white);
-        }
-
-        /* Hamburger button */
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            gap: 5px;
-            width: 42px;
-            height: 42px;
-            border-radius: 10px;
-            border: 1px solid var(--line);
-            background: rgba(255, 255, 255, 0.03);
-            padding: 10px;
-            z-index: 110;
-        }
-
-        .nav-toggle span {
-            display: block;
-            height: 2px;
-            width: 100%;
-            background: var(--champagne);
-            border-radius: 2px;
-            transition: 0.25s ease;
-        }
-
-        .nav-toggle.open span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-
-        .nav-toggle.open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .nav-toggle.open span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-
-        /* Mobile drawer */
-        .mobile-drawer {
-            display: none;
-            position: fixed;
-            top: 78px;
-            left: 0;
-            right: 0;
-            background: rgba(8, 8, 12, 0.98);
-            backdrop-filter: blur(24px);
-            border-bottom: 1px solid var(--line);
-            padding: 24px 20px 32px;
-            z-index: 95;
-            flex-direction: column;
-            gap: 16px;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
-            max-height: calc(100vh - 78px);
-            overflow-y: auto;
-        }
-
-        .mobile-drawer.open {
-            display: flex;
-            animation: slideDown 0.28s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-12px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .mobile-nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-
-        .mobile-nav-links a {
-            padding: 13px 14px;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 600;
-            color: #e2e8f0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .mobile-nav-links a:hover,
-        .mobile-nav-links a.active {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold2);
-        }
-
-        .mobile-organizer-block {
-            margin-top: 10px;
-            padding: 16px;
-            border-radius: 14px;
-            background: rgba(14, 14, 20, 0.85);
-            border: 1px solid var(--line);
-        }
-
-        .mobile-organizer-title {
-            font-size: 10.5px;
-            letter-spacing: 2px;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .mobile-organizer-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            padding: 120px 0 80px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background-color: var(--bg);
-            isolation: isolate;
-        }
-
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(90deg, rgba(5, 5, 7, 0.94) 0%, rgba(5, 5, 7, 0.82) 45%, rgba(5, 5, 7, 0.65) 100%),
-                radial-gradient(ellipse at 75% 45%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
-                url("assets/party-bg.jpg") center bottom / cover no-repeat;
-            opacity: 0.92;
-            z-index: -2;
-            filter: contrast(1.05) saturate(1.1);
-        }
-
-        .hero-bottom-fade {
-            position: absolute;
-            inset: auto 0 0 0;
-            height: 180px;
-            background: linear-gradient(to top, var(--bg), transparent);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.18fr 0.82fr;
-            gap: 48px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        /* Status chip */
-        .chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-            padding: 7px 16px;
-            border-radius: 30px;
-            border: 1px solid var(--line);
-            background: rgba(212, 175, 55, 0.08);
-            color: var(--champagne);
-            margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .chip i {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #4ade80;
-            box-shadow: 0 0 10px #4ade80;
-            display: inline-block;
-        }
-
-        .chip.closed i {
-            background: #f87171;
-            box-shadow: 0 0 10px #f87171;
-        }
-
-        .hero-eyebrow {
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 3.5px;
-            color: var(--gold2);
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .hero-title {
-            font-size: clamp(48px, 6.5vw, 92px);
-            font-weight: 700;
-            line-height: 0.95;
-            letter-spacing: -0.02em;
-            margin: 6px 0 18px;
-        }
-
-        .hero-tagline {
-            color: #d1d5db;
-            font-size: clamp(16px, 2vw, 19px);
-            line-height: 1.55;
-            max-width: 580px;
-            margin-bottom: 28px;
-        }
-
-        .hero-meta {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            width: 100%;
-            max-width: 620px;
-            margin-bottom: 30px;
-        }
-
-        .meta-card {
-            background: rgba(14, 14, 22, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 12px 14px;
-            transition: border-color 0.2s, transform 0.2s;
-        }
-
-        .meta-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-2px);
-        }
-
-        .meta-card small {
-            display: block;
-            font-size: 9.5px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--gold);
-            margin-bottom: 3px;
-        }
-
-        .meta-card strong {
-            display: block;
-            font-size: 13.5px;
-            font-weight: 700;
-            color: var(--white);
-            line-height: 1.25;
-        }
-
-        .hero-actions {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
-        }
-
-        /* Countdown */
-        .countdown-wrapper {
-            background: rgba(14, 14, 22, 0.65);
-            backdrop-filter: blur(14px);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 16px 20px;
-            width: 100%;
-            max-width: 480px;
-        }
-
-        .countdown-label {
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--mut);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .countdown-label span {
-            color: var(--gold);
-        }
-
-        .count-boxes {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-        }
-
-        .count-box {
-            flex: 1;
-            text-align: center;
-            background: rgba(5, 5, 7, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 12px;
-            padding: 8px 4px;
-        }
-
-        .count-box b {
-            display: block;
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--gold2);
-            line-height: 1.1;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .count-box span {
-            font-size: 9px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--mut);
-            font-weight: 700;
-        }
-
-        /* Hero Right Media */
-        .hero-media {
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero-poster-card {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1.5px solid var(--line);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(212, 175, 55, 0.2);
-            background: var(--panel);
-            cursor: pointer;
-            transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
-            max-width: 460px;
-            width: 100%;
-        }
-
-        .hero-poster-card:hover {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 60px rgba(212, 175, 55, 0.35);
-        }
-
-        .hero-poster-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .poster-badge {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            background: rgba(5, 5, 7, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: 800;
-            color: var(--gold2);
-            letter-spacing: 1px;
-            z-index: 2;
-        }
-
-        .poster-overlay {
-            position: absolute;
-            inset: auto 0 0 0;
-            background: linear-gradient(to top, rgba(5, 5, 7, 0.94) 0%, transparent 100%);
-            padding: 30px 18px 16px;
-            display: flex;
-            justify-content: center;
-            color: var(--champagne);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            transition: background 0.25s;
-        }
-
-        .hero-poster-card:hover .poster-overlay {
-            color: #fff;
-        }
-
-        /* Section layout */
-        section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        /* About Section */
-        #about {
-            background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.06), transparent 50%), #060609;
-            border-top: 1px solid rgba(212, 175, 55, 0.12);
-        }
-
-        .dept-pills {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 28px 0 44px;
-        }
-
-        .dept-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 9px 20px;
-            border-radius: 30px;
-            background: rgba(14, 14, 22, 0.85);
-            border: 1px solid var(--line);
-            font-size: 13.5px;
-            font-weight: 700;
-            color: var(--white);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-            transition: all 0.25s;
-        }
-
-        .dept-pill:hover {
-            border-color: var(--gold);
-            transform: translateY(-2px);
-            background: rgba(212, 175, 55, 0.12);
-            color: var(--gold2);
-        }
-
-        .dept-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--gold);
-            box-shadow: 0 0 8px var(--gold);
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 14px;
-            margin-bottom: 50px;
-        }
-
-        .highlight-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 24px 14px;
-            text-align: center;
-            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-        }
-
-        .highlight-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--gold);
-            box-shadow: var(--shadow), var(--glow);
-        }
-
-        .highlight-icon {
-            font-size: 28px;
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-
-        .highlight-card h4 {
-            font-size: 13.5px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            color: var(--white);
-        }
-
-        /* Pass Pricing Cards */
-        .pricing-wrap {
-            max-width: 720px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .price-card {
-            background: rgba(14, 14, 22, 0.85);
-            backdrop-filter: blur(14px);
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            padding: 32px 28px;
-            text-align: center;
-            position: relative;
-            transition: transform 0.25s, border-color 0.25s;
-        }
-
-        .price-card.featured {
-            border-color: var(--gold);
-            background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), rgba(14, 14, 22, 0.95));
-            box-shadow: var(--glow);
-        }
-
-        .price-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .price-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 8px;
-        }
-
-        .price-amount {
-            font-size: 42px;
-            font-weight: 900;
-            color: var(--gold2);
-            line-height: 1;
-            margin: 14px 0 10px;
-        }
-
-        .price-amount small {
-            font-size: 22px;
-            font-weight: 700;
-            vertical-align: top;
-            margin-right: 2px;
-        }
-
-        .price-desc {
-            font-size: 13px;
-            color: var(--mut);
-        }
-
-        /* Event Flow (Timeline) */
-        #event {
-            background: #050507;
-            border-top: 1px solid rgba(212, 175, 55, 0.12);
-        }
-
-        .timeline-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-            position: relative;
-        }
-
-        .timeline-card {
-            background: rgba(14, 14, 22, 0.8);
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 28px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 230px;
-            position: relative;
-            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-        }
-
-        .timeline-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--gold);
-            box-shadow: var(--shadow), var(--glow);
-        }
-
-        .timeline-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 18px;
-        }
-
-        .timeline-time {
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: var(--gold2);
-            background: rgba(212, 175, 55, 0.12);
-            padding: 5px 10px;
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .timeline-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--mut);
-        }
-
-        .timeline-card h3 {
-            font-size: 17px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 8px;
-            line-height: 1.25;
-        }
-
-        .timeline-card p {
-            font-size: 13px;
-            color: var(--mut);
-            line-height: 1.5;
-        }
-
-        /* Gallery Section */
-        #gallery {
-            background: radial-gradient(circle at 50% 100%, rgba(212, 175, 55, 0.08), transparent 50%), #07070b;
-            border-top: 1px solid rgba(212, 175, 55, 0.12);
-        }
-
-        .gallery-wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .gallery-row-1 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .gallery-row-2 {
-            display: grid;
-            grid-template-columns: 1fr 1.8fr 1fr;
-            gap: 16px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid var(--line);
-            height: 240px;
-            cursor: pointer;
-            background: var(--panel);
-            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s, border-color 0.3s;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-4px);
-            border-color: var(--gold);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), var(--glow);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.06);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(5, 5, 7, 0.85) 0%, transparent 60%);
-            display: flex;
-            align-items: flex-end;
-            padding: 16px;
-            opacity: 0;
-            transition: opacity 0.25s;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay span {
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-            color: var(--champagne);
-        }
-
-        /* Team Section */
-        #team {
-            background: #050507;
-            border-top: 1px solid rgba(212, 175, 55, 0.12);
-        }
-
-        .team-dept {
-            margin-bottom: 48px;
-        }
-
-        .team-dept:last-child {
-            margin-bottom: 0;
-        }
-
-        .dept-title-bar {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .dept-title-bar h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--white);
-            white-space: nowrap;
-        }
-
-        .dept-title-bar .line {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, var(--line), transparent);
-        }
-
-        .dept-title-bar .count-badge {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--gold);
-            background: rgba(212, 175, 55, 0.08);
-            border: 1px solid var(--line);
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .team-grid.cols-2 {
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 600px;
-        }
-
-        .team-card {
-            background: rgba(14, 14, 22, 0.75);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 24px 18px;
-            text-align: center;
-            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-        }
-
-        .team-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--gold);
-            box-shadow: var(--shadow), var(--glow);
-        }
-
-        .member-avatar {
-            width: 88px;
-            height: 88px;
-            border-radius: 50%;
-            margin: 0 auto 16px;
-            overflow: hidden;
-            border: 2px solid var(--line);
-            position: relative;
-            background: #11111a;
-            display: grid;
-            place-items: center;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-        }
-
-        .member-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .member-avatar .initials {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--gold2);
-            letter-spacing: 1px;
-        }
-
-        .member-avatar.has-img .initials {
-            display: none;
-        }
-
-        .team-card .name {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 4px;
-        }
-
-        .team-card .role {
-            font-size: 12px;
-            color: var(--mut);
-            font-weight: 500;
-        }
-
-        .team-card .dept-tag {
-            display: inline-block;
-            margin-top: 8px;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--gold);
-            padding: 3px 10px;
-            background: rgba(212, 175, 55, 0.08);
-            border-radius: 12px;
-        }
-
-        /* Admin / Scanner Utility Access */
-        #staff {
-            background: #08080c;
-            border-top: 1px solid rgba(212, 175, 55, 0.12);
-            padding: 70px 0;
-        }
-
-        .utility-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 820px;
-            margin: 0 auto;
-        }
-
-        .utility-card {
-            background: rgba(14, 14, 22, 0.85);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            transition: all 0.25s;
-        }
-
-        .utility-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-2px);
-            background: rgba(212, 175, 55, 0.05);
-        }
-
-        .util-info {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .util-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--line);
-            display: grid;
-            place-items: center;
-            font-size: 20px;
-            color: var(--gold2);
-            flex-shrink: 0;
-        }
-
-        .util-info h4 {
-            font-size: 15.5px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 2px;
-        }
-
-        .util-info p {
-            font-size: 12px;
-            color: var(--mut);
-        }
-
-        /* Footer */
-        footer.site-footer {
-            background: #030305;
-            border-top: 1px solid rgba(212, 175, 55, 0.16);
-            padding: 70px 0 30px;
-            color: #94a3b8;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr 0.8fr 1.2fr;
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .footer-brand h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 6px;
-        }
-
-        .footer-brand .sub {
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: var(--gold);
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 16px;
-        }
-
-        .footer-brand p {
-            font-size: 13px;
-            color: var(--mut);
-            line-height: 1.6;
-        }
-
-        .footer-col h5 {
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--white);
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .footer-col h5::before {
-            content: "";
-            width: 8px;
-            height: 2px;
-            background: var(--gold);
-        }
-
-        .footer-links {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            font-size: 13.5px;
-        }
-
-        .footer-links a {
-            transition: color 0.2s;
-            color: #94a3b8;
-        }
-
-        .footer-links a:hover {
-            color: var(--gold2);
-        }
-
-        .help-box {
-            font-size: 13px;
-            line-height: 1.55;
-            color: #cbd5e1;
-        }
-
-        .help-box strong {
-            color: var(--champagne);
-        }
-
-        .help-contacts {
-            margin-top: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 12px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 12.5px;
-            color: #e2e8f0;
-            transition: all 0.2s;
-        }
-
-        .contact-btn:hover {
-            border-color: var(--gold);
-            color: var(--gold2);
-            background: rgba(212, 175, 55, 0.1);
-        }
-
-        .footer-bottom {
-            padding-top: 24px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 14px;
-            font-size: 12px;
-            color: #64748b;
-        }
-
-        /* Sticky Mobile Register Bar */
-        .sticky-mobile-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(6, 6, 9, 0.94);
-            backdrop-filter: blur(16px);
-            border-top: 1px solid var(--line);
-            padding: 12px 20px;
-            z-index: 90;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6);
-        }
-
-        .sticky-mobile-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sticky-mobile-info strong {
-            font-size: 13.5px;
-            color: var(--white);
-            font-weight: 700;
-        }
-
-        .sticky-mobile-info span {
-            font-size: 10.5px;
-            color: var(--gold2);
-            font-weight: 600;
-        }
-
-        /* Lightbox Modal */
-        .lightbox-modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(3, 3, 5, 0.92);
-            backdrop-filter: blur(16px);
-            z-index: 1000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
-
-        .lightbox-modal.open {
-            display: flex;
-            opacity: 1;
-        }
-
-        .lightbox-card {
-            position: relative;
-            max-width: 900px;
-            width: 100%;
-            background: #0d0d14;
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9), var(--glow);
-            animation: popIn 0.25s ease;
-        }
-
-        @keyframes popIn {
-            from {
-                transform: scale(0.95);
-                opacity: 0;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 14px;
-            right: 16px;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            color: #fff;
-            font-size: 24px;
-            line-height: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-            transition: 0.2s;
-        }
-
-        .lightbox-close:hover {
-            background: var(--gold);
-            color: #000;
-        }
-
-        .lightbox-img-box img {
-            width: 100%;
-            height: auto;
-            max-height: 75vh;
-            object-fit: contain;
-            display: block;
-            background: #000;
-        }
-
-        .lightbox-caption {
-            padding: 16px 20px;
-            background: #101018;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .lightbox-caption span {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--champagne);
-        }
-
-        /* Scroll reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(22px);
-            transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .reveal.in {
-            opacity: 1;
-            transform: none;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .hero-content {
-                align-items: center;
-            }
-
-            .hero-tagline {
-                margin: 0 auto 28px;
-            }
-
-            .hero-meta {
-                margin: 0 auto 30px;
-            }
-
-            .hero-actions {
-                justify-content: center;
-            }
-
-            .countdown-wrapper {
-                margin: 0 auto;
-            }
-
-            .highlights-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .timeline-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-        }
-
-        @media (max-width: 860px) {
-            .nav-desktop {
-                display: none;
-            }
-
-            .nav-toggle {
-                display: flex;
-            }
-
-            .sticky-mobile-bar {
-                display: flex;
-            }
-
-            body {
-                padding-bottom: 74px;
-            }
-
-            .gallery-row-1 {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-row-2 {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .gallery-row-2 .gallery-item.wide {
-                grid-column: 1 / -1;
-            }
-
-            .utility-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero {
-                padding: 100px 0 60px;
-            }
-
-            .hero-title {
-                font-size: clamp(42px, 11vw, 64px);
-            }
-
-            .hero-meta {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .hero-actions .btn {
-                width: 100%;
-            }
-
-            .highlights-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .pricing-wrap {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .team-grid.cols-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-row-2 {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .gallery-item {
-                height: 200px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2a27e8">
+  <title>NEXORA ’26 — Master’s Fresher Party | Bilaspur</title>
+  <meta name="description"
+    content="NEXORA ’26 — Master’s Fresher Party. 13 October 2026, 11:00 AM – 5:00 PM at Tamasha Balle Balle Restaurant, Bilaspur. Register for your pass.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="home">
-
-    <!-- Top Navigation -->
-    <header class="site-header" id="navbar">
-        <div class="container nav-inner">
-            <a href="#home" class="brand">
-                <div class="brand-icon">♛</div>
-                <div class="brand-meta">
-                    <div class="brand-title">NEXORA <span>’26</span></div>
-                    <span class="brand-sub">MASTER’S FRESHER PARTY</span>
-                </div>
-            </a>
-
-            <nav class="nav-desktop">
-                <div class="nav-links">
-                    <a href="#home" class="active">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#event">Event</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="#team">Team</a>
-                </div>
-                <div class="nav-utility">
-                    <a class="btn btn-gold btn-sm" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank"
-                        rel="noopener">Register Now</a>
-                </div>
-            </nav>
-
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Mobile Slide-Down Menu -->
-    <div class="mobile-drawer" id="mobileDrawer">
-        <div class="mobile-nav-links">
-            <a href="#home" class="mobile-link">Home <span>&rarr;</span></a>
-            <a href="#about" class="mobile-link">About <span>&rarr;</span></a>
-            <a href="#event" class="mobile-link">Event Flow <span>&rarr;</span></a>
-            <a href="#gallery" class="mobile-link">Gallery <span>&rarr;</span></a>
-            <a href="#team" class="mobile-link">Team <span>&rarr;</span></a>
-        </div>
-
-        <div style="margin-top:8px">
-            <a class="btn btn-gold" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener"
-                style="width:100%">Register for Pass</a>
-        </div>
+<body>
+  <header class="site-header" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#home" class="brand" aria-label="NEXORA 2026 home"><span class="brand-title">NEXORA
+            <span>’26</span></span><span class="brand-sub">Master’s Fresher Party</span></a>
+        <nav class="nav-desktop" aria-label="Main">
+          <div class="nav-links"><a href="#home" class="nav-item active">Home</a><a href="#about"
+              class="nav-item">About</a><a href="#pricing" class="nav-item">Passes</a><a href="#event"
+              class="nav-item">Event flow</a><a href="#gallery" class="nav-item">Gallery</a><a href="#team"
+              class="nav-item">Team</a></div>
+          <a class="btn btn-gold btn-sm" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener">Get
+            your pass</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"
+          aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </header>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#home" class="nav-item">Home <span>→</span></a><a href="#about" class="nav-item">About <span>→</span></a><a
+      href="#pricing" class="nav-item">Passes <span>→</span></a><a href="#event" class="nav-item">Event flow
+      <span>→</span></a><a href="#gallery" class="nav-item">Gallery <span>→</span></a><a href="#team"
+      class="nav-item">Team <span>→</span></a>
+    <a href="admin/">Admin portal <span>→</span></a>
+    <a href="scanner/">Gate scanner <span>→</span></a>
+    <a class="btn btn-gold" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener">Get your pass</a>
+  </div>
 
-    <!-- Hero Section (Desktop Two-Column / Mobile Single-Column) -->
-    <header class="hero">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-bottom-fade" aria-hidden="true"></div>
-
-        <div class="container">
-            <div class="hero-grid">
-                <!-- Column 1: Event Details & Action -->
-                <div class="hero-content">
-                    <span class="chip" id="regChip"><i></i><span id="regTxt">Registration</span></span>
-                    <div class="hero-eyebrow">MASTER’S FRESHER PARTY</div>
-                    <h1 class="hero-title serif gtext">NEXORA ’26</h1>
-                    <p class="hero-tagline">A new journey. New faces. New memories. One unforgettable celebration for
-                        the Master’s batch.</p>
-
-                    <div class="hero-meta">
-                        <div class="meta-card">
-                            <small>Date</small>
-                            <strong>13 October 2026 · Tuesday</strong>
-                        </div>
-                        <div class="meta-card">
-                            <small>Time</small>
-                            <strong>11:00 AM – 5:00 PM</strong>
-                        </div>
-                        <div class="meta-card">
-                            <small>Venue</small>
-                            <strong>Tamasha Balle Balle, Bilaspur</strong>
-                        </div>
-                    </div>
-
-                    <div class="hero-actions">
-                        <a class="btn btn-gold" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank"
-                            rel="noopener" id="regBtn">🎟 Register Now</a>
-                        <a class="btn btn-out" href="#event">▶ Explore Event</a>
-                    </div>
-
-                    <div class="countdown-wrapper">
-                        <div class="countdown-label">COUNTDOWN TO <span>NEXORA ’26</span></div>
-                        <div class="count-boxes" id="count">
-                            <div class="count-box"><b id="cd">–</b><span>Days</span></div>
-                            <div class="count-box"><b id="ch">–</b><span>Hours</span></div>
-                            <div class="count-box"><b id="cm">–</b><span>Mins</span></div>
-                            <div class="count-box"><b id="cs">–</b><span>Secs</span></div>
-                        </div>
-                    </div>
-                </div>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="chip" id="regChip"><i></i><span id="regTxt">Registration</span></span>
+            <h1 class="hero-title display">NEXORA<br><em>’26</em></h1>
+            <p class="hero-tagline">The Master’s fresher party. New faces, new department friends, one big welcome on 13
+              October.</p>
+            <div class="hero-meta">
+              <div class="meta-card"><small>Date</small><strong>Tue, 13 October 2026</strong></div>
+              <div class="meta-card"><small>Time</small><strong>11:00 AM – 5:00 PM</strong></div>
+              <div class="meta-card"><small>Venue</small><strong>Tamasha Balle Balle, Bilaspur</strong></div>
             </div>
+            <div class="hero-actions">
+              <a class="btn btn-gold" id="regBtn" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank"
+                rel="noopener">Register now</a>
+              <a class="btn btn-out" href="#event">See the schedule</a>
+            </div>
+            <div class="countdown-wrapper">
+              <div class="count-label">Starts in</div>
+              <div class="count-boxes" id="count">
+                <div class="count-box"><b id="cd">–</b><span>Days</span></div>
+                <div class="count-box"><b id="ch">–</b><span>Hours</span></div>
+                <div class="count-box"><b id="cm">–</b><span>Mins</span></div>
+                <div class="count-box"><b id="cs">–</b><span>Secs</span></div>
+              </div>
+            </div>
+          </div>
+          <button class="ticket" id="heroPosterCard" aria-label="Preview the event poster">
+            <div class="ticket-top"><span>Admit one</span><span>Limited passes</span></div>
+            <h3 class="display">NEXORA ’26</h3>
+            <p>Master’s Fresher Party · Lunch, DJ, games and the Mr. &amp; Ms. Fresher crown.</p>
+            <div class="ticket-perf"></div>
+            <div class="ticket-foot"><span>13 Oct · 11:00 AM</span><span>View poster</span></div>
+          </button>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <!-- 3. About NEXORA -->
     <section id="about">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="eyebrow">About NEXORA</span>
-                <h2 class="section-title">More Than a Fresher Party</h2>
-                <p class="section-copy">NEXORA ’26 is a celebration welcoming the new Master’s batch and bringing
-                    students together across departments.</p>
-
-                <!-- Department Badges -->
-                <div class="dept-pills">
-                    <div class="dept-pill"><span class="dept-dot"></span> Chemistry</div>
-                    <div class="dept-pill"><span class="dept-dot"></span> Zoology</div>
-                    <div class="dept-pill"><span class="dept-dot"></span> Computer Science</div>
-                    <div class="dept-pill"><span class="dept-dot"></span> Biotechnology</div>
-                </div>
-            </div>
-
-            <!-- Built around highlights -->
-            <div class="highlights-grid reveal">
-                <div class="highlight-card">
-                    <div class="highlight-icon">🤝</div>
-                    <h4>New Connections</h4>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🎵</div>
-                    <h4>Music &amp; Dance</h4>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🎯</div>
-                    <h4>Games &amp; Activities</h4>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🍽️</div>
-                    <h4>Delicious Food</h4>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">📸</div>
-                    <h4>Photography</h4>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">✨</div>
-                    <h4>Memories</h4>
-                </div>
-            </div>
-
-            <!-- Pricing passes -->
-            <div class="pricing-wrap reveal">
-                <div class="price-card">
-                    <h3>Junior Pass</h3>
-                    <div class="price-amount"><small>₹</small>899</div>
-                    <p class="price-desc">Complete entry pass · Lunch &amp; snacks · All party activities</p>
-                </div>
-                <div class="price-card featured">
-                    <h3>Senior Pass</h3>
-                    <div class="price-amount"><small>₹</small>999</div>
-                    <p class="price-desc">Complete entry pass · Lunch &amp; snacks · All party activities</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title display">More than a fresher party</h2>
+          <p class="section-copy">NEXORA ’26 welcomes the new Master’s batch and brings five departments together for
+            one day.</p>
+          <div class="dept-pills">
+            <div class="dept-pill">Chemistry</div>
+            <div class="dept-pill">Zoology</div>
+            <div class="dept-pill">Computer Science</div>
+            <div class="dept-pill">Biotechnology</div>
+            <div class="dept-pill">PGDCA</div>
+          </div>
         </div>
+        <div class="highlights-grid reveal">
+          <div class="highlight-card">
+            <div class="highlight-icon">🤝</div>
+            <h4>New connections</h4>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🎵</div>
+            <h4>Live DJ & music</h4>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🎯</div>
+            <h4>Games & surprises</h4>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🍽️</div>
+            <h4>Buffet lunch</h4>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">📸</div>
+            <h4>HD photography</h4>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">✨</div>
+            <h4>Digital entry pass</h4>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- 4. Event Flow -->
-    <section id="event">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="eyebrow">Event Flow</span>
-                <h2 class="section-title">The day at a glance.</h2>
-                <p class="section-copy">Timings designed for seamless fun, games, food and music.</p>
-            </div>
-
-            <div class="timeline-grid">
-                <div class="timeline-card reveal">
-                    <div class="timeline-top">
-                        <span class="timeline-time">11:00 AM</span>
-                        <span class="timeline-num">01</span>
-                    </div>
-                    <div>
-                        <h3>Welcome &amp; Entry</h3>
-                        <p>Check-in, meet the batch and settle in.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-card reveal">
-                    <div class="timeline-top">
-                        <span class="timeline-time">12:00 PM</span>
-                        <span class="timeline-num">02</span>
-                    </div>
-                    <div>
-                        <h3>Music &amp; Dance</h3>
-                        <p>Lights up. Music on. Let the celebration begin.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-card reveal">
-                    <div class="timeline-top">
-                        <span class="timeline-time">01:30 PM</span>
-                        <span class="timeline-num">03</span>
-                    </div>
-                    <div>
-                        <h3>Games &amp; Activities</h3>
-                        <p>Fun challenges, team moments and surprises.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-card reveal">
-                    <div class="timeline-top">
-                        <span class="timeline-time">03:00 PM</span>
-                        <span class="timeline-num">04</span>
-                    </div>
-                    <div>
-                        <h3>Food &amp; Memories</h3>
-                        <p>Celebrate, click photos and make memories.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-card reveal">
-                    <div class="timeline-top">
-                        <span class="timeline-time">05:00 PM</span>
-                        <span class="timeline-num">05</span>
-                    </div>
-                    <div>
-                        <h3>Grand Finale</h3>
-                        <p>One final moment before the next chapter begins.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="pricing" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title display">Pick your pass</h2>
+          <p class="section-copy">Both passes include entry, lunch buffet, snacks and every activity on the day.</p>
         </div>
+        <div class="pricing-wrap reveal">
+          <div class="price-card">
+            <h3>Junior pass</h3>
+            <div class="price-amount"><small>₹</small>899</div>
+            <p class="price-desc">Entry, lunch buffet, snacks, music and all party activities.</p>
+            <a class="btn btn-out" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener">Choose
+              Junior</a>
+          </div>
+          <div class="price-card featured">
+            <h3>Senior pass</h3>
+            <div class="price-amount"><small>₹</small>999</div>
+            <p class="price-desc">Entry, lunch buffet, snacks, DJ party and all event activities.</p>
+            <a class="btn btn-gold" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener">Choose
+              Senior</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- 5. Gallery (Masonry Grid Layout) -->
+    <section id="event" class="on-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title display">Your day, hour by hour</h2>
+          <p class="section-copy">Six hours, eleven programmes, from gate check-in to the group photo.</p>
+          <div class="event-meta-chips"><span class="meta-chip">11:00 AM – 5:00 PM</span><span class="meta-chip">Tamasha
+              Balle Balle</span><span class="meta-chip">11 programmes</span></div>
+        </div>
+        <div class="timeline-grid">
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">11:00 – 11:30 AM</span><span
+                class="timeline-num">01</span></div>
+            <div>
+              <h3>🎟️ Welcome & Registration</h3>
+              <p>Gate entry, digital pass/QR verification and batch welcome.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">11:30 – 11:45 AM</span><span
+                class="timeline-num">02</span></div>
+            <div>
+              <h3>🎤 Welcome & Introduction</h3>
+              <p>Faculty and student introductions, opening address, stage kickoff.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">11:45 AM – 12:15 PM</span><span
+                class="timeline-num">03</span></div>
+            <div>
+              <h3>🎂 Cake Cutting</h3>
+              <p>Ceremonial cake cutting to mark the Master's batch beginning.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">12:15 – 1:00 PM</span><span
+                class="timeline-num">04</span></div>
+            <div>
+              <h3>👑 Fresher Introduction Round</h3>
+              <p>Icebreakers, personality spotlight and batch introductions.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">1:00 – 2:00 PM</span><span
+                class="timeline-num">05</span></div>
+            <div>
+              <div class="timeline-featured-pill">Lunch break</div>
+              <h3>🍽️ Lunch & Networking</h3>
+              <p>Buffet lunch, mocktails and time to meet other departments.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">2:00 – 2:45 PM</span><span
+                class="timeline-num">06</span></div>
+            <div>
+              <h3>🎭 Fun Games & Activities</h3>
+              <p>Batch challenges, group games and surprises.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">2:45 – 3:30 PM</span><span
+                class="timeline-num">07</span></div>
+            <div>
+              <div class="timeline-featured-pill">Live stage</div>
+              <h3>💃 Dance, Music & Talent</h3>
+              <p>Live DJ, solo and group dances, vocals and performances.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">3:30 – 4:15 PM</span><span
+                class="timeline-num">08</span></div>
+            <div>
+              <h3>🏆 Fresher Challenges & Titles</h3>
+              <p>Stage showdowns, creative tasks and special title rounds.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal crown-card">
+            <div class="timeline-top"><span class="timeline-time">4:15 – 4:40 PM</span><span
+                class="timeline-num">09</span></div>
+            <div>
+              <div class="timeline-featured-pill">Crowning round</div>
+              <h3>👑 Mr. & Ms. Fresher — Final Round</h3>
+              <p>Runway showcase, jury Q&A and the crowning of NEXORA ’26.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">4:40 – 4:50 PM</span><span
+                class="timeline-num">10</span></div>
+            <div>
+              <h3>🏅 Titles, Awards & Prizes</h3>
+              <p>Sashes, trophies, titles and prize handouts.</p>
+            </div>
+          </div>
+          <div class="timeline-card reveal">
+            <div class="timeline-top"><span class="timeline-time">4:50 – 5:00 PM</span><span
+                class="timeline-num">11</span></div>
+            <div>
+              <h3>📸 Group Photos & Closing</h3>
+              <p>Batch photoshoot, confetti and farewell.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="gallery">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="eyebrow">Visual Gallery</span>
-                <h2 class="section-title">Moments That Matter</h2>
-                <p class="section-copy">A visual gallery for NEXORA ’26.</p>
-            </div>
-
-            <div class="gallery-wrap reveal">
-                <!-- Row 1: 3 equal photos -->
-                <div class="gallery-row-1">
-                    <div class="gallery-item" data-caption="Party Lights & Stage Beams">
-                        <img src="assets/party-bg.jpg" alt="Party Lights & Atmosphere" loading="lazy">
-                        <div class="gallery-overlay"><span>Party Lights &amp; Atmosphere</span></div>
-                    </div>
-                    <div class="gallery-item" data-caption="Live DJ Turntable & Sound Console">
-                        <img src="assets/gallery-dj.jpg" alt="Live DJ console" loading="lazy">
-                        <div class="gallery-overlay"><span>DJ Beats &amp; Live Music</span></div>
-                    </div>
-                    <div class="gallery-item" data-caption="Friends Celebration & Sparklers">
-                        <img src="assets/gallery-celebration.jpg" alt="Celebration toast" loading="lazy">
-                        <div class="gallery-overlay"><span>Sparklers &amp; Memories</span></div>
-                    </div>
-                </div>
-
-                <!-- Row 2: Pic, Wide Photo, Pic -->
-                <div class="gallery-row-2">
-                    <div class="gallery-item" data-caption="NEXORA ’26 Official Poster">
-                        <img src="assets/hero.jpg" alt="NEXORA '26 Visual" loading="lazy">
-                        <div class="gallery-overlay"><span>Official Party Visual</span></div>
-                    </div>
-                    <div class="gallery-item wide" data-caption="Energetic Dance Floor with Gold Confetti">
-                        <img src="assets/gallery-dance.jpg" alt="Dance floor confetti" loading="lazy">
-                        <div class="gallery-overlay"><span>Dance Floor with Golden Confetti</span></div>
-                    </div>
-                    <div class="gallery-item" data-caption="Stage Atmosphere & Cheers">
-                        <img src="assets/party-bg.jpg" alt="Stage crowd cheering" loading="lazy">
-                        <div class="gallery-overlay"><span>Cheering Crowd &amp; Stage Energy</span></div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title display">What the day looks like</h2>
+          <p class="section-copy">Tap any photo to open it full size.</p>
         </div>
+        <div class="gallery-wrap reveal">
+          <div class="gallery-item" tabindex="0" role="button" aria-label="View photo: Party lights & atmosphere"
+            data-caption="Party lights & atmosphere"><img src="assets/party-bg.jpg" alt="Party lights & atmosphere"
+              loading="lazy">
+            <div class="gallery-overlay">Party lights & atmosphere</div>
+          </div>
+          <div class="gallery-item" tabindex="0" role="button" aria-label="View photo: DJ beats & live music"
+            data-caption="DJ beats & live music"><img src="assets/gallery-dj.jpg" alt="DJ beats & live music"
+              loading="lazy">
+            <div class="gallery-overlay">DJ beats & live music</div>
+          </div>
+          <div class="gallery-item" tabindex="0" role="button" aria-label="View photo: Celebration & sparklers"
+            data-caption="Celebration & sparklers"><img src="assets/gallery-celebration.jpg"
+              alt="Celebration & sparklers" loading="lazy">
+            <div class="gallery-overlay">Celebration & sparklers</div>
+          </div>
+          <div class="gallery-item" tabindex="0" role="button" aria-label="View photo: Dance floor energy"
+            data-caption="Dance floor energy"><img src="assets/gallery-dance.jpg" alt="Dance floor energy"
+              loading="lazy">
+            <div class="gallery-overlay">Dance floor energy</div>
+          </div>
+          <div class="gallery-item" tabindex="0" role="button" aria-label="View photo: Night atmosphere"
+            data-caption="Night atmosphere"><img src="assets/party-bg.jpg" alt="Night atmosphere" loading="lazy">
+            <div class="gallery-overlay">Night atmosphere</div>
+          </div>
+          <div class="gallery-item" tabindex="0" role="button" aria-label="View photo: Toast & cheers"
+            data-caption="Toast & cheers"><img src="assets/gallery-celebration.jpg" alt="Toast & cheers" loading="lazy">
+            <div class="gallery-overlay">Toast & cheers</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- 6. Team Section -->
     <section id="team">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="eyebrow">The people behind it</span>
-                <h2 class="section-title">NEXORA ’26 Team</h2>
-                <p class="section-copy">M.Sc. students organising the Master’s Fresher Party.</p>
-            </div>
-
-            <div id="teamRoot"></div>
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title display">Meet the organizers</h2>
+          <p class="section-copy">Master’s students from three departments, running the show.</p>
         </div>
+        <div id="teamRoot"></div>
+      </div>
     </section>
 
-    <!-- 8. Admin / Scanner Access (Utility Access Buttons) -->
     <section id="staff">
-        <div class="container">
-            <div class="utility-grid reveal">
-                <div class="utility-card">
-                    <div class="util-info">
-                        <div class="util-icon">🛠️</div>
-                        <div>
-                            <h4>Admin Portal</h4>
-                            <p>Registration management, payments &amp; pass issuing</p>
-                        </div>
-                    </div>
-                    <a class="btn btn-out btn-sm" href="admin/">Admin Login &rarr;</a>
-                </div>
-
-                <div class="utility-card">
-                    <div class="util-info">
-                        <div class="util-icon">📷</div>
-                        <div>
-                            <h4>Gate Scanner</h4>
-                            <p>QR pass verification and live venue check-in</p>
-                        </div>
-                    </div>
-                    <a class="btn btn-out btn-sm" href="scanner/">Open Scanner &rarr;</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="utility-grid reveal">
+          <div class="utility-card">
+            <div class="util-info">
+              <div class="util-icon">🛠️</div>
+              <div>
+                <h4>Admin control room</h4>
+                <p>Verify payments, issue passes, send broadcasts.</p>
+              </div>
+            </div><a class="btn btn-out btn-sm" href="admin/">Sign in</a>
+          </div>
+          <div class="utility-card">
+            <div class="util-info">
+              <div class="util-icon">📷</div>
+              <div>
+                <h4>Gate scanner</h4>
+                <p>Scan QR passes and watch live check-ins.</p>
+              </div>
+            </div><a class="btn btn-out btn-sm" href="scanner/">Open scanner</a>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- 9. Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Col 1: Brand & Venue -->
-                <div class="footer-brand">
-                    <h4>NEXORA ’26</h4>
-                    <span class="sub">MASTER’S FRESHER PARTY</span>
-                    <p>
-                        <strong>13 October 2026 · Tuesday</strong><br>
-                        11:00 AM – 5:00 PM<br>
-                        Tamasha Balle Balle Restaurant, Bilaspur
-                    </p>
-                </div>
-
-                <!-- Col 2: Navigate -->
-                <div class="footer-col">
-                    <h5>Navigate</h5>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#event">Event Flow</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#team">Team</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Organizer -->
-                <div class="footer-col">
-                    <h5>Organizer</h5>
-                    <ul class="footer-links">
-                        <li><a href="admin/">Admin Portal</a></li>
-                        <li><a href="scanner/">Gate Scanner</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Help Desk & Contact -->
-                <div class="footer-col">
-                    <h5>Help Desk</h5>
-                    <div class="help-box">
-                        <strong>Class:</strong> M.Sc. Chemistry 3rd Semester<br>
-                        <strong>Location:</strong> Main Building, LCIT Campus Near Principal Office
-                    </div>
-                    <div class="help-contacts">
-                        <a class="contact-btn" href="tel:+917987389762">
-                            <span>Sagar Lahre</span>
-                            <span>Call &rarr;</span>
-                        </a>
-                        <a class="contact-btn" href="tel:+919718921795">
-                            <span>Ankit Patel</span>
-                            <span>Call &rarr;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div>&copy; 2026 NEXORA ’26. All rights reserved.</div>
-                <div>Master’s Fresher Party &bull; LCIT Campus &bull; Bilaspur</div>
-            </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4 class="display">NEXORA ’26</h4><span class="sub">Master’s Fresher Party</span>
+          <p><strong>Tue, 13 October 2026</strong><br>11:00 AM – 5:00 PM<br>Tamasha Balle Balle Restaurant, Bilaspur</p>
         </div>
-    </footer>
-
-    <!-- Sticky Mobile CTA Bar -->
-    <div class="sticky-mobile-bar" id="stickyMobileBar">
-        <div class="sticky-mobile-info">
-            <strong>NEXORA ’26 Passes</strong>
-            <span>13 Oct · 11 AM - 5 PM</span>
+        <div class="footer-col">
+          <h5>Navigate</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Passes</a></li>
+            <li><a href="#event">Event flow</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
         </div>
-        <a class="btn btn-gold btn-sm" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank"
-            rel="noopener">Register Now 🎟️</a>
+        <div class="footer-col">
+          <h5>Staff</h5>
+          <ul class="footer-links">
+            <li><a href="admin/">Admin portal</a></li>
+            <li><a href="scanner/">Gate scanner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Help desk</h5>
+          <div class="help-box"><strong>Class:</strong> M.Sc. Chemistry 3rd Semester<br><strong>Location:</strong> Main
+            Building, Ground Floor, Room 00</div>
+          <div class="help-contacts"><a class="contact-btn" href="tel:+917987389762">
+              <div class="contact-info"><span class="contact-name">Sagar Lahre</span><span
+                  class="contact-dept">Chemistry</span></div><span class="contact-phone">Call</span>
+            </a><a class="contact-btn" href="tel:+918827341282">
+              <div class="contact-info"><span class="contact-name">Muskan Kshatriya</span><span
+                  class="contact-dept">Zoology</span></div><span class="contact-phone">Call</span>
+            </a><a class="contact-btn" href="tel:+918770189493">
+              <div class="contact-info"><span class="contact-name">Ajay Chandra</span><span
+                  class="contact-dept">Computer Science</span></div><span class="contact-phone">Call</span>
+            </a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 NEXORA ’26. All rights reserved.</div>
+        <div>Tamasha Balle Balle · Bilaspur</div>
+      </div>
     </div>
+  </footer>
 
-    <!-- Image Lightbox Modal -->
-    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image Lightbox">
-        <div class="lightbox-card">
-            <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox">&times;</button>
-            <div class="lightbox-img-box">
-                <img id="lightboxImg" src="assets/hero.jpg" alt="Preview Image">
-            </div>
-            <div class="lightbox-caption">
-                <span id="lightboxText">NEXORA ’26 Official Night Party Flyer</span>
-                <div style="display:flex;gap:10px">
-                    <a class="btn btn-gold btn-sm" id="lightboxDownloadBtn" href="assets/hero.jpg"
-                        download="NEXORA-2026-Flyer.jpg">⬇ Download</a>
-                    <a class="btn btn-out btn-sm" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank"
-                        rel="noopener">Register Now</a>
-                </div>
-            </div>
+  <div class="sticky-mobile-bar" id="stickyMobileBar">
+    <div class="sticky-mobile-info"><strong>NEXORA ’26</strong><span>13 Oct · 11:00 AM</span></div>
+    <a class="btn btn-gold btn-sm" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank" rel="noopener">Get your
+      pass</a>
+  </div>
+
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lightbox-card">
+      <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close preview">×</button>
+      <div class="lightbox-img-box"><img id="lightboxImg" src="assets/nexora-poster.jpg" alt="Preview"></div>
+      <div class="lightbox-caption"><span id="lightboxText">NEXORA ’26</span>
+        <div style="display:flex;gap:10px"><a class="btn btn-gold btn-sm" id="lightboxDownloadBtn"
+            href="assets/nexora-poster.jpg" download="NEXORA-2026.jpg">Save</a>
+          <a class="btn btn-out btn-sm" href="https://forms.gle/CepYsBLXzJxgtbiXA" target="_blank"
+            rel="noopener">Register</a>
         </div>
+      </div>
     </div>
-
-    <script>
-        /* ===== EDIT THE TEAM HERE ===== */
-        const TEAM = [
-            {
-                dept: "Chemistry",
-                members: [
-                    { name: "Sagar Lahre", photo: "sagar-lahre.jpg", initials: "SL" },
-                    { name: "Ankit Patel", photo: "ankit-patel.jpeg", initials: "AP" },
-                    { name: "Md Kaif", photo: "md-kaif.jpeg", initials: "MK" },
-                    { name: "Harsh Jaiswal", photo: "harsh-jaiswal.jpeg", initials: "HJ" }
-                ]
-            },
-            {
-                dept: "Zoology",
-                members: [
-                    { name: "Kritika Vaishnav", photo: "kritika-vaishnav", initials: "KV" },
-                    { name: "Mushkan", photo: "mushkan", initials: "M" }
-                ]
-            },
-            {
-                dept: "Computer Science",
-                members: [
-                    { name: "Abhay Singh", photo: "abhay-singh", initials: "AS" },
-                    { name: "Ajay Chandra", photo: "ajay-chandra", initials: "AC" }
-                ]
-            }
-        ];
-
-        const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-
-        /* Render Team */
-        const teamRoot = document.getElementById("teamRoot");
-        if (teamRoot) {
-            teamRoot.innerHTML = TEAM.map(d => `
-                <div class="team-dept reveal">
-                    <div class="dept-title-bar">
-                        <h3>${esc(d.dept)}</h3>
-                        <span class="line"></span>
-                        <span class="count-badge">${d.members.length} member${d.members.length > 1 ? "s" : ""}</span>
-                    </div>
-                    <div class="team-grid ${d.members.length === 2 ? 'cols-2' : ''}">
-                        ${d.members.map(m => `
-                            <div class="team-card">
-                                <div class="member-avatar" data-photo="${esc(m.photo)}">
-                                    <img alt="${esc(m.name)}" loading="lazy">
-                                    <div class="initials">${esc(m.initials || m.name.slice(0, 2))}</div>
-                                </div>
-                                <div class="name">${esc(m.name)}</div>
-                                <div class="role">M.Sc. Student</div>
-                                <span class="dept-tag">${esc(d.dept)}</span>
-                            </div>
-                        `).join("")}
-                    </div>
-                </div>
-            `).join("");
-
-            // Attempt to load member photos from photos/ folder
-            document.querySelectorAll(".member-avatar").forEach(box => {
-                const img = box.querySelector("img");
-                const exts = ["", ".jpg", ".jpeg", ".png", ".webp"];
-                let i = 0;
-                const base = box.dataset.photo;
-                const next = () => {
-                    if (i < exts.length) {
-                        const ext = exts[i++];
-                        const src = base.includes(".") ? "photos/" + base : "photos/" + base + ext;
-                        img.src = src;
-                    } else {
-                        img.style.display = "none";
-                    }
-                };
-                img.onload = () => { box.classList.add("has-img"); img.style.display = "block"; };
-                img.onerror = next;
-                next();
-            });
-        }
-
-        /* Countdown + Registration Status (India Time) */
-        // Party starts at 11:00 AM on 13 October 2026
-        const EVENT = new Date("2026-10-13T11:00:00+05:30");
-        // Registration opens 6 Oct 2026 and closes 10 Oct 2026 23:59:59
-        const OPEN = new Date("2026-10-06T00:00:00+05:30");
-        const CLOSE = new Date("2026-10-10T23:59:59+05:30");
-
-        const pad = (n) => String(n).padStart(2, "0");
-
-        function tick() {
-            const now = new Date();
-            let ms = EVENT - now;
-            const countEl = document.getElementById("count");
-
-            if (ms <= 0) {
-                if (countEl) countEl.innerHTML = '<div style="flex:1;padding:12px 24px;text-align:center"><b style="font-size:22px;color:var(--gold2)">The party is on! 🎉</b></div>';
-            } else {
-                const s = Math.floor(ms / 1000);
-                const days = Math.floor(s / 86400);
-                const hrs = pad(Math.floor((s % 86400) / 3600));
-                const mins = pad(Math.floor((s % 3600) / 60));
-                const secs = pad(s % 60);
-
-                if (document.getElementById("cd")) document.getElementById("cd").textContent = days;
-                if (document.getElementById("ch")) document.getElementById("ch").textContent = hrs;
-                if (document.getElementById("cm")) document.getElementById("cm").textContent = mins;
-                if (document.getElementById("cs")) document.getElementById("cs").textContent = secs;
-            }
-
-            const chip = document.getElementById("regChip");
-            const regTxt = document.getElementById("regTxt");
-            const regBtn = document.getElementById("regBtn");
-
-            if (chip && regTxt) {
-                if (now < OPEN) {
-                    regTxt.textContent = "Registration opens 6 Oct";
-                    chip.classList.add("closed");
-                } else if (now <= CLOSE) {
-                    regTxt.textContent = "Registration open · closes 10 Oct";
-                    chip.classList.remove("closed");
-                } else {
-                    regTxt.textContent = "Registration closed";
-                    chip.classList.add("closed");
-                    if (regBtn) regBtn.textContent = "REGISTRATION CLOSED";
-                }
-            }
-        }
-        tick();
-        setInterval(tick, 1000);
-
-        /* Sticky Header */
-        const nav = document.getElementById("navbar");
-        addEventListener("scroll", () => {
-            if (nav) nav.classList.toggle("stuck", window.scrollY > 30);
-        }, { passive: true });
-
-        /* Mobile Hamburger Drawer */
-        const navToggle = document.getElementById("navToggle");
-        const mobileDrawer = document.getElementById("mobileDrawer");
-
-        if (navToggle && mobileDrawer) {
-            navToggle.addEventListener("click", () => {
-                navToggle.classList.toggle("open");
-                mobileDrawer.classList.toggle("open");
-            });
-
-            // Close on link click
-            mobileDrawer.querySelectorAll("a").forEach(a => {
-                a.addEventListener("click", () => {
-                    navToggle.classList.remove("open");
-                    mobileDrawer.classList.remove("open");
-                });
-            });
-        }
-
-        /* Lightbox Image Modal */
-        const lightbox = document.getElementById("lightboxModal");
-        const lightboxImg = document.getElementById("lightboxImg");
-        const lightboxText = document.getElementById("lightboxText");
-        const lightboxDownloadBtn = document.getElementById("lightboxDownloadBtn");
-        const lightboxCloseBtn = document.getElementById("lightboxCloseBtn");
-
-        function openLightbox(src, caption) {
-            if (!lightbox || !lightboxImg) return;
-            lightboxImg.src = src;
-            if (lightboxText) lightboxText.textContent = caption || "NEXORA ’26 Visual";
-            if (lightboxDownloadBtn) {
-                lightboxDownloadBtn.href = src;
-                lightboxDownloadBtn.download = (caption ? caption.replace(/[^a-zA-Z0-9]/g, "-") : "nexora") + ".jpg";
-            }
-            lightbox.classList.add("open");
-            document.body.style.overflow = "hidden";
-        }
-
-        function closeLightbox() {
-            if (!lightbox) return;
-            lightbox.classList.remove("open");
-            document.body.style.overflow = "";
-        }
-
-        if (lightboxCloseBtn) lightboxCloseBtn.addEventListener("click", closeLightbox);
-        if (lightbox) {
-            lightbox.addEventListener("click", (e) => {
-                if (e.target === lightbox) closeLightbox();
-            });
-        }
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && lightbox && lightbox.classList.contains("open")) {
-                closeLightbox();
-            }
-        });
-
-        // Hero poster triggers
-        const heroPosterCard = document.getElementById("heroPosterCard");
-        const viewFlyerHeroBtn = document.getElementById("viewFlyerHeroBtn");
-        const viewFlyerFooter = document.getElementById("viewFlyerFooter");
-
-        if (heroPosterCard) {
-            heroPosterCard.addEventListener("click", () => openLightbox("assets/hero.jpg", "NEXORA ’26 Official Night Party Flyer"));
-        }
-        if (viewFlyerHeroBtn) {
-            viewFlyerHeroBtn.addEventListener("click", () => openLightbox("assets/hero.jpg", "NEXORA ’26 Official Night Party Flyer"));
-        }
-        if (viewFlyerFooter) {
-            viewFlyerFooter.addEventListener("click", (e) => {
-                e.preventDefault();
-                openLightbox("assets/hero.jpg", "NEXORA ’26 Official Night Party Flyer");
-            });
-        }
-
-        // Gallery items trigger lightbox
-        document.querySelectorAll(".gallery-item").forEach(item => {
-            item.addEventListener("click", () => {
-                const img = item.querySelector("img");
-                const caption = item.dataset.caption || (img ? img.alt : "");
-                if (img) openLightbox(img.src, caption);
-            });
-        });
-
-        /* Scroll Reveal Observer */
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("in");
-                    io.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-    </script>
+  </div>
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>
